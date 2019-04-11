@@ -16,7 +16,7 @@
 |Component|Score|Y/N|
 |:-:|:-:|:-:|
 |Membership Mechanism|20%|N|
-|GitLab Page|5%|N|
+|Firebase Page|5%|N|
 |Database|15%|N|
 |RWD|15%|N|
 |Topic Key Function|15%|N|
