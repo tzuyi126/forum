@@ -37,7 +37,6 @@ function init() {
             ///         2. Push user email and post data
             ///         3. Clear text field
 
-        
             firebase.database().ref('com_list').push({ 
                 email : user_email,
                 comment : post_txt.value
