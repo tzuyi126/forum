@@ -6,9 +6,6 @@ function init() {
         if (user) {
             user_email = user.email;
             menu.innerHTML = "<span class='dropdown-item'>" + user.email + "</span><span class='dropdown-item' id='btnLogout'>Logout</span>";
-            /// TODO 5: Complete logout button event
-            ///         1. Add a listener to logout button 
-            ///         2. Show alert when logout success or error (use "then & catch" syntex)
 
             btnLogout.addEventListener('click', function () {
                 firebase.auth().signOut()
@@ -21,7 +18,6 @@ function init() {
             });
 
         } else {
-            // It won't show any post if not login
             menu.innerHTML = "<a class='dropdown-item' href='signin.html'>Login</a>";
             document.getElementById('post_list').innerHTML = "";
         }
@@ -32,10 +28,6 @@ function init() {
 
     post_btn.addEventListener('click', function () {
         if (post_txt.value != "") {
-            /// TODO 6: Push the post to database's "com_list" node
-            ///         1. Get the reference of "com_list"
-            ///         2. Push user email and post data
-            ///         3. Clear text field
 
             firebase.database().ref('com_list').push({ 
                 email : user_email,
@@ -58,20 +50,15 @@ function init() {
     var second_count = 0;
 
     postsRef.on('child_added',snapshot=> {
-            /// TODO 7: Get all history posts when the web page is loaded and add listener to update new post
-            ///         1. Get all history post and push to a list (str_before_username + email + </strong> + data + str_after_content)
-            ///         2. Join all post in list to html in once
-            ///         4. Add listener for update the new post
-            ///         5. Push new post's html to a list
-            ///         6. Re-join all post in list to html when update
-            ///
-            ///         Hint: When history post count is less then new post count, update the new and refresh html
             var post_list = document.getElementById('post_list');
 
             var new_post = str_before_username + snapshot.val().email + "</strong>" + snapshot.val().comment + str_after_content;
             post_list.innerHTML = post_list.innerHTML + new_post;
         })
         .catch(e => console.log(e.message));
+}
+function button(){
+    window.location = "index.html";
 }
 
 window.onload = function () {
