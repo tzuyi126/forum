@@ -1,6 +1,10 @@
 {
-    "rules": {
-      ".write":"auth!=null",
-      ".read":"auth!=null"
-    }
+  "rules": {
+    "com_list":{
+      ".read":"auth!=null",
+      ".write":"auth!=null"
+    },
+    ".read": true,
+    ".write": false
   }
+}
