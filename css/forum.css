@@ -27,6 +27,8 @@ body {
     -webkit-transform: translateX(-1rem);
     transform: translateX(-1rem); /* Account for horizontal padding on navbar */
   }
+
+  
 }
 
 .nav-scroller {
@@ -76,22 +78,21 @@ body {
 .box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
 
 .lh-100 { line-height: 1; }
-.lh-125 { line-height: 1.25; }
+.lh-125 { line-height: 2; }
 .lh-150 { line-height: 1.5; }
 
 .button {
-  background-color: #4CAF50; /* Green */
   border: none;
   color: white;
-  padding: 200px 120px;
+  width:280px;
+  height:280px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 50px;
-  margin: 4px 2px;
-  position: absolute;
-  top: 80px;
-  left: 100px;
+  float:left;
+  margin-right:80px;
+  margin-top:80px;
   -webkit-transition-duration: 0.4s; /* Safari */
   transition-duration: 0.4s;
   cursor: pointer;
@@ -102,8 +103,27 @@ body {
   color: white; 
   border: 2px solid #4CAF50;
 }
-
 .button1:hover {
   background-color: white;
-  color: black;
+  color: #4CAF50;
+}
+
+.button2 {
+  background-color: rgb(51, 70, 240); 
+  color: white; 
+  border: 2px solid rgb(51, 70, 240);
+}
+.button2:hover {
+  background-color: white;
+  color: rgb(51, 70, 240);
+}
+
+.button3 {
+  background-color: rgb(199, 50, 50); 
+  color: white; 
+  border: 2px solid rgb(199, 50, 50);
+}
+.button3:hover {
+  background-color: white;
+  color: rgb(199, 50, 50);
 }

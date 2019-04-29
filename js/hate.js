@@ -19,7 +19,7 @@ function init() {
 
         } else {
             menu.innerHTML = "<a class='dropdown-item' href='signin.html'>Login</a>";
-            document.getElementById('post_list').innerHTML = "";
+            document.getElementById('post_list3').innerHTML = "";
         }
     });
 
@@ -29,7 +29,7 @@ function init() {
     post_btn.addEventListener('click', function () {
         if (post_txt.value != "") {
 
-            firebase.database().ref('com_list').push({ 
+            firebase.database().ref('com_list3').push({ 
                 email : user_email,
                 comment : post_txt.value
             });
@@ -38,8 +38,8 @@ function init() {
     });
 
     // The html code for post
-    var str_before_username = "<div class='my-3 p-3 bg-white rounded box-shadow'><h6 class='border-bottom border-gray pb-2 mb-0'>Recent updates</h6><div class='media text-muted pt-3'><img src='img/test.svg' alt='' class='mr-2 rounded' style='height:32px; width:32px;'><p class='media-body pb-3 mb-0 small lh-125 border-bottom border-gray'><strong class='d-block text-gray-dark'>";
-    var str_after_content = "</p></div></div>\n";
+    var str_before_username = "<div class='my-3 p-3 bg-white rounded box-shadow'><h6 class='border-bottom border-gray pb-2 mb-0'></h6><div class='media text-muted pt-3'><img src='img/user.png' alt='' class='mr-2 rounded' style='height:32px; width:32px;'><p class='media-body pb-3 mb-0 big lh-125 border-bottom border-gray'>";
+    var str_after_content = "</p>HATE</div></div>\n";
 
     var postsRef = firebase.database().ref('com_list');
     // List for store posts html
@@ -52,7 +52,7 @@ function init() {
     postsRef.on('child_added',snapshot=> {
             var post_list = document.getElementById('post_list');
 
-            var new_post = str_before_username + snapshot.val().email + "</strong>" + snapshot.val().comment + str_after_content;
+            var new_post = str_before_username + snapshot.val().email +"<strong style='font-size:20px' class='d-block text-gray-dark'>" + snapshot.val().comment + "</strong>"+ str_after_content;
             post_list.innerHTML = post_list.innerHTML + new_post;
         })
         .catch(e => console.log(e.message));
