@@ -19,7 +19,7 @@ function init() {
 
         } else {
             menu.innerHTML = "<a class='dropdown-item' href='signin.html'>Login</a>";
-            document.getElementById('post_list3').innerHTML = "";
+            document.getElementById('post_list').innerHTML = "";
         }
     });
 
@@ -29,9 +29,10 @@ function init() {
     post_btn.addEventListener('click', function () {
         if (post_txt.value != "") {
 
-            firebase.database().ref('com_list3').push({ 
+            firebase.database().ref('com_list').push({ 
                 email : user_email,
-                comment : post_txt.value
+                comment : post_txt.value,
+                type:"hate"
             });
             post_txt.value ="";
         }
@@ -52,8 +53,10 @@ function init() {
     postsRef.on('child_added',snapshot=> {
             var post_list = document.getElementById('post_list');
 
-            var new_post = str_before_username + snapshot.val().email +"<strong style='font-size:20px' class='d-block text-gray-dark'>" + snapshot.val().comment + "</strong>"+ str_after_content;
-            post_list.innerHTML = post_list.innerHTML + new_post;
+            if(snapshot.val().type == "hate"){
+                var new_post = str_before_username + snapshot.val().email +"<strong style='font-size:20px' class='d-block text-gray-dark'>" + snapshot.val().comment + "</strong>"+ str_after_content;
+                post_list.innerHTML = post_list.innerHTML + new_post;
+            }
         })
         .catch(e => console.log(e.message));
 }
