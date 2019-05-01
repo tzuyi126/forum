@@ -32,7 +32,7 @@ function init() {
             firebase.auth().onAuthStateChanged(function (user) {
                 // Check user login
                 if (user) {
-                    firebase.database().ref('com_list').push({ 
+                    firebase.database().ref('post').push({ 
                         email : user_email,
                         comment : post_txt.value,
                         type:"gossip"
@@ -50,13 +50,7 @@ function init() {
     var str_before_username = "<div class='my-3 p-3 bg-white rounded box-shadow'><h6 class='border-bottom border-gray pb-2 mb-0'></h6><div class='media text-muted pt-3'><img src='img/user.png' alt='' class='mr-2 rounded' style='height:32px; width:32px;'><p class='media-body pb-3 mb-0 big lh-125 border-bottom border-gray'>";
     var str_after_content = "</p>GOSSIP</div>";
     
-    var postsRef = firebase.database().ref('com_list');
-    // List for store posts html
-    var total_post = [];
-    // Counter for checking history post update complete
-    var first_count = 0;
-    // Counter for checking when to update new post
-    var second_count = 0;
+    var postsRef = firebase.database().ref('post');
 
     postsRef.on('child_added',snapshot=> {
             var post_list = document.getElementById('post_list');

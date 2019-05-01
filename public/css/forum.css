@@ -72,7 +72,7 @@ body {
 .text-white-50 { color: rgba(255, 255, 255, .5); }
 
 .bg-purple { background-color: var(--purple); }
-.bg-blue { background-color: rgb(9, 43, 107); }
+.bg-blue { background-color: rgb(71, 110, 168); }
 
 .border-bottom { border-bottom: 1px solid #e5e5e5; }
 
@@ -88,7 +88,7 @@ ul {
   padding: 0;
   font-size: 20px;
   overflow: hidden;
-  background-color: rgb(122, 122, 122);
+  background-color: rgb(44, 65, 121);
 }
 
 li {
@@ -110,7 +110,7 @@ li a:hover:not(.active) {
 }
 
 .active {
-  background-color: rgb(14, 69, 105);
+  background-color: rgb(7, 34, 51);
 }
 .active:hover{
   color:white;
@@ -125,7 +125,7 @@ li a:hover:not(.active) {
   color: white;
   padding: 14px 16px;
   cursor: pointer;
-  background-color: rgb(9, 43, 107);
+  background-color: rgb(71, 110, 168);
 }
 .btn:hover{
   background-color: rgb(23, 23, 99);

@@ -1,8 +1,12 @@
 {
   "rules": {
-    "com_list":{
+    "post":{
       ".read":"auth!=null",
-      ".write":"auth!=null"
+      ".write":"auth!=null",
+      "post_child":{
+        ".read":"auth!=null",
+        ".write":"auth!=null"
+      }
     },
     ".read": true,
     ".write": false

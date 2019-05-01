@@ -25,25 +25,20 @@ function init() {
     });
 
     // The html code for post
-    var str_before_username = "<div class='my-3 p-3 bg-white rounded box-shadow' style='margin-top:10px;'><h6 class='border-bottom border-gray pb-2 mb-0'></h6><div class='media text-muted pt-3'><img src='img/user.png' alt='' class='mr-2 rounded' style='height:32px; width:32px;'><p class='media-body pb-3 mb-0 big lh-125 border-bottom border-gray'>";
+    var str_before_username = "<div class='my-3 p-3 bg-white rounded box-shadow' style='cursor:pointer;' id='goReply'><h6 class='border-bottom border-gray pb-2 mb-0'></h6><div class='media text-muted pt-3'><img src='img/user.png' alt='' class='mr-2 rounded' style='height:32px; width:32px;'><p class='media-body pb-3 mb-0 big lh-125 border-bottom border-gray'>";
     var str_after_content = "</p>";
     
-    var postsRef = firebase.database().ref('com_list');
-    // List for store posts html
-    var total_post = [];
-    // Counter for checking history post update complete
-    var first_count = 0;
-    // Counter for checking when to update new post
-    var second_count = 0;
+    var postsRef = firebase.database().ref('post');
 
     postsRef.on('child_added',snapshot=> {
-            var post_list = document.getElementById('post_list');
+        var post_list = document.getElementById('post_list');
             
-            var new_post = str_before_username + snapshot.val().email +"<strong style='font-size:20px' class='d-block text-gray-dark'>" + snapshot.val().comment + "</strong>"+ str_after_content + snapshot.val().type +"</div></div>\n";
-            post_list.innerHTML = post_list.innerHTML + new_post;
-            
-        })
-        .catch(e => console.log(e.message));
+        var new_post = str_before_username + snapshot.val().email +"<strong style='font-size:20px' class='d-block text-gray-dark'>" + snapshot.val().comment + "</strong>"+ str_after_content + snapshot.val().type +"</div><textarea class='form-control' rows='1' id='comment' style='resize:none' ></textarea><div class='media text-muted pt-3'><button id='reply_btn' type='button' style='font-size:15px;' class='btn btn-primary'>Reply</button></div></div>\n";
+        post_list.innerHTML = post_list.innerHTML + new_post;
+    })
+    .catch(e => console.log(e.message));
+
+        
 }
 
 window.onload = function () {
