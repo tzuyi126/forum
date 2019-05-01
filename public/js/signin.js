@@ -15,7 +15,7 @@ function initApp() {
         .catch(function(error) {
             txtEmail.value = "";
             txtPassword.value = "";
-            create_alert("error","Email Login");
+            create_alert("error","Please check your Email and Password!");
         });
     });
 
@@ -36,7 +36,7 @@ function initApp() {
                 var email = error.email;
                 // The firebase.auth.AuthCredential type that was used.
                 var credential = error.credential;
-                create_alert("error","Google Login");
+                create_alert("error","Something wrong with Google!");
             });
     });
 }

@@ -5,7 +5,7 @@ function init() {
         // Check user login
         if (user) {
             user_email = user.email;
-            menu.innerHTML = "<a class='btn' style='color: white;'>" + user_email +"</a><a class='btn' style='color: white;' id='btnLogout'>Logout</a>";
+            menu.innerHTML = "<a class='btn' style='color: white;'href='userpage.html'>" + user_email +"</a><a class='btn' style='color: white;' id='btnLogout'>Logout</a>";
 
             btnLogout.addEventListener('click', function () {
                 firebase.auth().signOut()
@@ -32,12 +32,15 @@ function init() {
             firebase.auth().onAuthStateChanged(function (user) {
                 // Check user login
                 if (user) {
+                    
                     firebase.database().ref('post').push({ 
                         email : user_email,
                         comment : post_txt.value,
                         type:"gossip"
                     });
                     post_txt.value ="";
+                    
+                    var newClientKey = database.ref().child('post').push().key;
         
                 } else {
                     alert("You need to log in first!");
@@ -48,7 +51,7 @@ function init() {
 
     // The html code for post
     var str_before_username = "<div class='my-3 p-3 bg-white rounded box-shadow'><h6 class='border-bottom border-gray pb-2 mb-0'></h6><div class='media text-muted pt-3'><img src='img/user.png' alt='' class='mr-2 rounded' style='height:32px; width:32px;'><p class='media-body pb-3 mb-0 big lh-125 border-bottom border-gray'>";
-    var str_after_content = "</p>GOSSIP</div>";
+    var str_after_content = "</p>#gossip</div>";
     
     var postsRef = firebase.database().ref('post');
 

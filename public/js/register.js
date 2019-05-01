@@ -10,7 +10,7 @@ function initApp() {
         var pass = txtPassword.value;
         var pass2 = txtPassword2.value;
 
-        if(pass==pass2){
+        if(pass==pass2 && pass!=""){
             firebase.auth().createUserWithEmailAndPassword(email,pass)
             .then(function() {
                 txtEmail.value = "";

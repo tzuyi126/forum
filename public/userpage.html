@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Talk Out</title>
+    <title>Talk Out User Page</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -22,13 +22,13 @@
     <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-database.js"></script>
     <script src="js/config.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/userpage.js"></script>
 </head>
 
 <body class="bg-light" background="img/background.png";>
         
     <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-blue">
-        <a class="navbar-brand animate" href="#" style="font-family:Microsoft JhengHei; font-size:40px;">Talk Out</a>
+        <a class="navbar-brand animate" href="index.html" style="font-family:Microsoft JhengHei; font-size:40px;">Talk Out</a>
         <a  id="user_menu"></a>
         
     </nav>
@@ -39,8 +39,20 @@
     </ul>
     <main role="main" class="container">
         
-        <div id="post_list"></div>
+        <div id="custom-alert">
+        </div>
+        <div style="color:rgb(0, 0, 0);background-color:rgb(165, 161, 161); text-align: center;font-size: 30px">Change My Password</div>
+        <img class="mb-4" src="img/signin.png" alt="" height="100" style="text-align: center;" >
 
+        <div id="username" style="color:white;"></div>
+        
+        <div><a style="color:white; ">New Password</a></div>
+        <div><input type="password" id="newPassword"  required></div>
+        <div><a style="color:white; ">Checking New Password</a></div>
+        <div><input type="password" id="newPassword2"  required></div>
+        
+        <br>
+        <button  id="btnChange" style="cursor: pointer; background-color: #4CAF50; color:white; ">Submit</button>
     </main>
     <!-- Bootstrap core JavaScript-->
     <!-- Placed at the end of the document so the pages load faster -->

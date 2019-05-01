@@ -131,3 +131,23 @@ li a:hover:not(.active) {
   background-color: rgb(23, 23, 99);
   color: white;
 }
+
+.animate {
+  position: relative;
+  -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
+  animation-name: example;
+  animation-duration: 2s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+  0%   {left:-100px; top:0px;}
+  100% {left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+  0%   {left:-100px; top:0px;}
+  100% {left:0px; top:0px;}
+}
