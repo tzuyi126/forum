@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Talk Out Signin Page</title>
+  <title>Talk Out Register Page</title>
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link href="css/signin.css" rel="stylesheet">
@@ -19,7 +19,7 @@
   <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.10.1/firebase-auth.js"></script>
   <script src="js/config.js"></script>
-  <script src="js/signin.js"></script>
+  <script src="js/register.js"></script>
 </head>
 
 <body class="text-center" background="img/background.png";>
@@ -27,18 +27,15 @@
   </div>
   <div class="form-signin">
     <img class="mb-4" src="img/signin.png" alt="" height="150">
-    <label for="inputEmail" class="sr-only">Email address</label>
-    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-    <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
-    </div>
-    <button class="btn btn-lg btn-primary btn-block" id="btnLogin">Sign in</button>
-    <button class="btn btn-lg btn-info btn-block" id="btngoogle">Sign in with Google</button>
-    <a class="btn btn-lg btn-secondary btn-block" href="register.html">Create new account</a>
+    <a style="color:rgb(58, 132, 202); float:left;">Email address</a>
+    <input type="email" id="inputEmail"  required autofocus>
+    <a style="color:rgb(58, 132, 202); float:left;">Password</a>
+    <input type="password" id="inputPassword"  required>
+    <a style="color:rgb(58, 132, 202); float:left;">Checking Password</a>
+    <input type="password" id="inputPassword2"   required>
+
+    <a class="btn btn-lg btn-secondary btn-block" id="btnSignUp" style="cursor: pointer;">Create</a>
+    <a class="btn btn-lg btn-primary btn-block" href="signin.html">Back to sign in</a>
   </div>
 </body>
 

@@ -29,24 +29,17 @@
 
     <nav class="navbar navbar-expand-md fixed-top navbar-dark bg-blue">
         <a class="navbar-brand" href="index.html" style="font-family:Microsoft JhengHei;font-size:40px;">Talk Out</a>
-
-        <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">User</a>
-                    <div id="dynamic-menu" class="dropdown-menu" aria-labelledby="dropdown01">
-                        <a class="dropdown-item" href="signin.html">Login</a>
-                    </div>
-                </li>
-            </ul>
-        </div>
+        <a  id="user_menu"></a>
     </nav>
+
+    <ul>
+        <li><a class="active" href="gossip.html">Gossip</a></li>
+        <li><a href="sports.html">Sports</a></li>
+        <li><a href="hate.html">Hate</a></li>
+    </ul>
 
     <main role="main" class="container">
 
-        <button class="button " onclick="window.location.href='gossip.html';">Gossip</button>
-            <button class="button button2" onclick="window.location.href='sports.html';">Sports</button>
-            <button class="button button3" onclick="window.location.href='hate.html';">Hate</button>
         <div id="post_list">
         </div>
 

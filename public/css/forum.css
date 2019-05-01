@@ -61,7 +61,7 @@ body {
 }
 
 .nav-underline .nav-link:hover {
-  color: var(--blue);
+  color: white;
 }
 
 .nav-underline .active {
@@ -72,7 +72,7 @@ body {
 .text-white-50 { color: rgba(255, 255, 255, .5); }
 
 .bg-purple { background-color: var(--purple); }
-.bg-blue { background-color: rgba(9, 43, 107, 0.788); }
+.bg-blue { background-color: rgb(9, 43, 107); }
 
 .border-bottom { border-bottom: 1px solid #e5e5e5; }
 
@@ -82,50 +82,52 @@ body {
 .lh-125 { line-height: 2; }
 .lh-150 { line-height: 1.5; }
 
-.button {
-  border: none;
-  color: black;
-  background-color: white;
-  width:280px;
-  height:70px;
+ul {
+  list-style-type: none;
+  margin-top: 40px;
+  padding: 0;
+  font-size: 20px;
+  overflow: hidden;
+  background-color: rgb(122, 122, 122);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
   text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
-  display: inline-block;
-  font-size: 50px;
-  float:top;
-  margin-right:20px;
-  margin-top:40px;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
+}
+
+li a:hover:not(.active) {
+  background-color: rgb(0, 0, 0);
+  color:white;
+  text-decoration: none;
+}
+
+.active {
+  background-color: rgb(14, 69, 105);
+}
+.active:hover{
+  color:white;
+  text-decoration: none;
+}
+
+.btn{
+  float: left;
+  font-size: 20px;
+  text-decoration: none;
+  margin-left: 10px;
+  color: white;
+  padding: 14px 16px;
   cursor: pointer;
+  background-color: rgb(9, 43, 107);
 }
-
-.button1 {
-  background-color: #4CAF50; 
-  color: white; 
-  border: 2px solid #4CAF50;
-}
-.button1:hover {
-  background-color: white;
-  color: #4CAF50;
-}
-
-.button2 {
-  background-color: rgb(51, 70, 240); 
-  color: white; 
-  border: 2px solid rgb(51, 70, 240);
-}
-.button2:hover {
-  background-color: white;
-  color: rgb(51, 70, 240);
-}
-
-.button3 {
-  background-color: rgb(199, 50, 50); 
-  color: white; 
-  border: 2px solid rgb(199, 50, 50);
-}
-.button3:hover {
-  background-color: white;
-  color: rgb(199, 50, 50);
+.btn:hover{
+  background-color: rgb(23, 23, 99);
+  color: white;
 }

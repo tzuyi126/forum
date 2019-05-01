@@ -4,7 +4,6 @@ function initApp() {
     var txtPassword = document.getElementById('inputPassword');
     var btnLogin = document.getElementById('btnLogin');
     var btnGoogle = document.getElementById('btngoogle');
-    var btnSignUp = document.getElementById('btnSignUp');
 
     btnLogin.addEventListener('click', function () {
         var email = txtEmail.value;
@@ -39,23 +38,6 @@ function initApp() {
                 var credential = error.credential;
                 create_alert("error","Google Login");
             });
-    });
-
-    btnSignUp.addEventListener('click', function () {
-        var email = txtEmail.value;
-        var pass = txtPassword.value;
-        firebase.auth().createUserWithEmailAndPassword(email,pass)
-        .then(function() {
-            txtEmail.value = "";
-            txtPassword.value = "";
-            create_alert("success","sign up");
-        })
-        .catch(function(error) {
-            txtEmail.value = "";
-            txtPassword.value = "";
-            create_alert("error","sign up");
-        });
-
     });
 }
 

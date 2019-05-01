@@ -1,16 +1,17 @@
 function init() {
     var user_email = '';
     firebase.auth().onAuthStateChanged(function (user) {
-        var menu = document.getElementById('dynamic-menu');
+        var menu = document.getElementById('user_menu');
         // Check user login
         if (user) {
             user_email = user.email;
-            menu.innerHTML = "<span class='dropdown-item'>" + user.email + "</span><span class='dropdown-item' id='btnLogout'>Logout</span>";
+            menu.innerHTML = "<a class='btn' style='color: white;'>" + user_email +"</a><a class='btn' style='color: white;' id='btnLogout'>Logout</a>";
 
             btnLogout.addEventListener('click', function () {
                 firebase.auth().signOut()
                 .then(function() {
                     alert("Log out successfully!");
+                    window.location = "hate.html";
                 })
                 .catch(function(error) {
                     alert("Fail to Log out!");
@@ -18,7 +19,7 @@ function init() {
             });
 
         } else {
-            menu.innerHTML = "<a class='dropdown-item' href='signin.html'>Login</a>";
+            menu.innerHTML = "<a class='btn' style='color: white;' href='signin.html'>Log In</a>";
             document.getElementById('post_list').innerHTML = "";
         }
     });
