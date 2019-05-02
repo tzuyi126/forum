@@ -5,12 +5,15 @@
 ## Topic
 * Project Name : Talk Out Forum
 * Key functions (add/delete)
-    1. 三個版面
+    1. 三個版面：Gossip,Sports,Hate
+    2. 每個版面可上傳文字
+    3. Log in
+    4. Log out
+    5. Register
     
 * Other functions (add/delete)
-    1. [xxxx]
-    2. [xxxx]
-    3. [xxxx]
+    1. Sign in with google
+    2. User Page
 
 ## Basic Components
 |Component|Score|Y/N|
