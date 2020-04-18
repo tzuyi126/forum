@@ -1,5 +1,8 @@
 # Software Studio 2019 Spring Midterm Project
 
+<img src = "forum.jpg" width = "1273px" height = "740px"></img>
+
+
 ## Talk Out Forum
 ### By 張子宜
 
