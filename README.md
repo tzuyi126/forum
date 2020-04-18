@@ -1,6 +1,6 @@
 # Software Studio 2019 Spring Midterm Project
 
-<img src = "forum.jpg" width = "1273px" height = "740px"></img>
+<img src = "forum.jpg" ></img>
 
 
 ## Talk Out Forum
