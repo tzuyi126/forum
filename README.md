@@ -20,5 +20,4 @@
 2. User Pate : 點進去標題旁的信箱帳號，即可看到使用者頁面
 3. Sign in with google : 登入時可選擇用google帳號登入
 
-<img src = "forum.jpg" ></img>
-[]!image(forum.jpg)
+![image](forum.jpg)
