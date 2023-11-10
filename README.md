@@ -1,12 +1,6 @@
-# Software Studio 2019 Spring Midterm Project
-
-
-
-
-## Talk Out Forum
-### By 張子宜
-
-# 作品網址：https://forummmm-6bc9d.firebaseapp.com
+# Talk Out Forum
+- Software Studio 2019 Spring Midterm Project
+- Website：https://forummmm-6bc9d.firebaseapp.com
 
 # Components Description : 
 1. 主頁: 可瀏覽所有文章，不分類別
